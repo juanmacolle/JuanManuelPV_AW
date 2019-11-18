@@ -1,0 +1,8 @@
+ul {
+    /*Este estilo va a reemplazar la bala (bullet) la lista*/
+    /*Introduzco un direccionamiento al fichero imagen relativo al mismo directorio de la página*/
+
+
+    list-style-image: url("purple-bullet-round.png");
+    list-style-position: inside;
+}
