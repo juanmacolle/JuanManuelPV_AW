@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Práctica 3.1</title>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        div {
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Un formulario tiene 2 atributos principales: action
+        url donde se envían los datos del formulario
+        y method="POST" como se envían normalmente como POST, no GET
+        POST quiere decir que los datos van en el cuerpo del mensaje http -->
+
+    <form action="https://enft35xvzynuj.x.pipedream.net" method="POST">
+        <div id="contenedora-formulario" style="width: 707px;background-color: #BEBEBE;">
+
+            <!-- Fila 1 -->
+            <div class="clearfix" style="float: none;margin: 0 auto;width: 707px;text-align: center;background-color: white;">
+                -Formulario en capas-
+            </div>
+            <!-- Fila 2 -->
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 2 -->
+                <div style="float: left;width: 80px;">
+                    Nombre:
+                 </div>
+                 <!-- Celda 2 de la fila 2 -->
+                <div style="float: left;">
+                    <!-- El input de type text sirve para escribir un texto normal como un nombre o apellidos -->
+                    <input type="text" name="nombre" size="21">
+                </div>
+                <!-- Celda 3 de la fila 2 -->
+                <div style="float: left;">
+                    F. Nac:
+                </div>
+                <!-- Celda 4 de la fila 2 -->
+                <div style="float: left;">
+                    <!-- Este input de type date sirve para que podamos poner una fecha, con un calendario para elegirla y también la puede poner automáticamente -->
+                    <input type="date" name="fecha" size="25">
+                </div>
+                <!-- Celda 5 de la fila 2 -->
+                <div style="float: left;">
+                    DNI:
+                </div>
+                <!-- Celda 6 de la fila 2 -->
+                <div style="float: left;">
+                    <!-- El input de type text sirve para escribir un texto normal como un nombre o apellidos -->
+                    <input type="text" size="25"  
+                    maxlength="9" name="nif" 
+                    pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" 
+                    title="Introduzca el dni" required/>
+                </div>
+            </div>
+
+            <!-- Fila 3 -->
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 3 -->
+                <div style="float: left;width: 80px;">
+                    Apellidos:
+                </div>
+                <!-- Celda 2 de la fila 3 -->
+                <div style="float: left;">
+                    <!-- El input de type text sirve para escribir un texto normal como un nombre o apellidos -->
+                    <input type="text" name="apellidos" size="20">
+                </div>
+            </div>
+
+            <!-- Fila 4 -->
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 4 -->
+                <div style="float: left;width: 80px;">
+                    Contraseña:
+                </div>
+                <!-- Celda 2 de la fila 4 -->
+                <div style="float: left;">
+                    <!-- Este input de tipo password es para que la contraseña salga oculta con esta símbolo * -->
+                    <input type="password" name="password">
+                </div>
+            </div>   
+
+            <!-- Fila 5 -->
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 5 -->
+                <!-- El tipo radio sirve para seleccionar una opcion y solo te permite escoger una de ellas -->
+                <div style="float: left;">
+                    <label for="varon">Varón</label>
+                    <input type="radio" name="genero" id="varon" value="varon">
+                </div>
+                <!-- Celda 2 de la fila 5 -->
+                <div style="float: left;">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="genero" id="mujer" value="mujer">
+                </div>
+                <!-- Celda 3 de la fila 5 -->
+                <div style="float: left;">
+                    <label for="otro">Otro</label>
+                    <input type="radio" name="genero" id="otro" value="otro">
+                </div>
+            </div> 
+
+            <!-- Fila 6 -->
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 6 -->
+                <!-- El tipo checkbox sirve para poder seleccionar más opciones y no solo una opción -->
+                <div style="float: left;">
+                    <label for="varon">Varón</label>
+                    <input type="checkbox" name="varon" id="varon" value="varon">
+                </div>
+                <!-- Celda 2 de la fila 6 -->
+                <div style="float: left;">
+                    <label for="mujer">Mujer</label>
+                    <input type="checkbox" name="mujer" id="mujer" value="mujer">
+                </div>
+                <!-- Celda 3 de la fila 6 -->
+                <div style="float: left;">
+                    <label for="otro">Otro</label>
+                    <input type="checkbox" name="otro" id="otro" value="otro">
+                </div>
+            </div> 
+
+            <!-- Fila 7 -->
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 7 -->
+                <div style="float: left;">
+                    Fichero
+                </div>
+                <!-- Celda 2 de la fila 7 -->
+                <div style="float: left;">
+                    <!-- Este intup de tipo file, sirve para seleccionar ficheros del ordenador -->
+                    <input type="file" name="fich" id="fich">
+                </div>
+            </div> 
+
+            <!-- Fila 8 --> 
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 8 -->
+                <div style="float: left;">
+                    Variable oculta
+                </div>
+                <!-- Celda 2 de la fila 8 -->
+                <div style="float: left;">
+                    <!-- El intup de tipo hidden sirve para darle un valor oculto -->
+                    <input type="hidden" name="parametrooculto" value="valor oculto">
+                </div>
+            </div>
+
+            <!-- Fila 9 -->
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 9 -->
+                <div style="float: left;width: 80px;">
+                    <!-- Este input es un botón para limpiar los campos del formulario -->
+                    <input type="reset" value="Limpiar">
+                </div>
+                <!-- Celda 2 de la fila 9 -->
+                <div style="float: right;">
+                    <!-- Este input es para enviar el formulario al action (url) establecido -->
+                    <input type="submit" value="Enviar">
+                </div>
+            </div>      
+        </div>
+    </form>
+</body>
+</html>
