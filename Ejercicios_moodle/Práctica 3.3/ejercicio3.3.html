@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Práctica 3.3</title>
+    <style>
+        /* Esta es la clase general del sprite */
+        /* Establece la imagen de fondo a utilizar en las capas(div) */
+        /* Aparte establece que la capa será como inline quitando los saltos de línea propios de las capas (div)*/
+        .sprite {
+            background-image: url("https://i.stack.imgur.com/XN0S1.png");
+            display: inline-block;
+        }
+        /* Esta establece el ancho(width) y el alto(height) y la posición de la capa con el icono g+ de fondo */
+        .google-plus {
+            width: 36px;
+            height: 36px;
+            background-position: 0px 0px;
+        }
+        /* Mismo principio que la clase anterior sólo que añado un background-position: -36px 0px; */
+        /* Coordenadas x (ancho) y (alto) sobre la esquina superior izquierda de la capa */
+        /* Establezco desplazamiento a izquierda igual que el ancho de la primera imagen de g+ */
+        .facebook {
+            width: 63px;
+            height: 28px;
+            background-position: -36px 0px;
+        }
+        /* Mismo principio que la clase anterior sólo que añado un background-position: -98px 0px; */
+        .twitter {
+            width: 63px;
+            height: 28px;
+            background-position: -98px 0px;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Estos <div class> hacen que muestren las 3 imagenes y <title> sirve como título por si fallaran la imagen que muestre el título -->
+    <div class="sprite google-plus" title="Google Plus"></div>
+    <div class="sprite facebook" title="Facebook"></div>
+    <div class="sprite twitter" title="Twitter"></div>
+</body>
+</html>
